@@ -178,8 +178,12 @@ def clean_data(data, speed_df):
         
     Returns:
     --------
-    sample : numpy.float64
-        Randomly drawn sample from skewed distribution
+    X : numpy.array
+        Array of x-values for training data
+    y : numpy.array
+        Array of y-values for training data
+    label_encoder: sklearn LabelEncoder()
+        Object that encodes y-values for training data
     """
     
     # Define variables of interest
@@ -191,11 +195,11 @@ def clean_data(data, speed_df):
     data = data.dropna()
 
     # Handle the launch_speed, launch_angle, hc_x, hc_y, hit_distance_sc na values
-    hits = ['triple','single','double','home_run']
-    hits = data[data['events'].isin(hits)]
+    hit_types = ['triple','single','double','home_run']
+    hits = data[data['events'].isin(hit_types)]
 
     # Create game_week column, where week of season is taken from game_date in Savant
-    season_start = datetime.strptime('2022-04-01', '%Y-%m-%d').date()
+    season_start = datetime.strptime('2021-04-01', '%Y-%m-%d').date()
     hits['game_date'] = pd.to_datetime(hits['game_date'])
     hits['game_date'] = hits.apply(lambda x: (x['game_date'].date() - season_start).days // 7, axis = 1)
     hits = hits.rename(columns = {'game_date':'game_week'})
@@ -218,7 +222,7 @@ def clean_data(data, speed_df):
     hits = hits.rename(columns = {'batter':'player_id', 'hit_distance_sc': 'contact_distance'})
     hits = hits[~hits['des'].str.contains('fielding error')]
 
-    # Impute sprint speed for each hit
+    # Impute sprint speed for each hit, create distributions for each hit type given the player's "average" sprint speed 
     hits['sprint_speed'] = hits.apply(lambda x: np.where(x['events'] == 'triple', sample_left_skew(x['player_id'],speed_df), np.where(x['events'] == 'single', sample_right_skew(x['player_id'],speed_df), sample_normal(x['player_id'],speed_df))), axis = 1)
 
     hits = hits.drop(['des','player_id'], axis = 1)
@@ -239,8 +243,8 @@ def clean_data(data, speed_df):
     return X, y, label_encoder
 
 # Grab training data
-start_date = '2022-04-01'
-end_date = '2022-10-03'
+start_date = '2021-04-01'
+end_date = '2021-10-03'
 #end_date = '2022-05-03'
 
 data = statcast(start_date, end_date, parallel = True)
@@ -254,7 +258,7 @@ speed_data22 = statcast_sprint_speed(2022, 1)
 speed_dfs = [speed_data21, speed_data22]
 speed_data = join_speed_dataframes(speed_dfs)
 '''
-speed_data22 = statcast_sprint_speed(2022, 1)
+speed_data21 = statcast_sprint_speed(2021, 1)
 
 # Clean training data, exported to Jupyter Notebook this script will be run in
-X, y, label_encoder = clean_data(data, speed_data22)
+X, y, label_encoder = clean_data(data, speed_data21)
