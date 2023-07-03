@@ -22,8 +22,40 @@ Much of this project's inspiration has been inspired by Corbin Carroll, outfield
 | [Third Pass Model](https://github.com/joshsalce/Speed_ISO/tree/main/Third%20Pass%20Model) | Contains Jupter Notebooks of new and final set of models trained on preprocessed data plus predictions for a set of individual players, as well as CSV of Statcast sprint speeds from 2015-2023. Models Used: (Class) Balanced Random Forest, Weighted Random Forest (Class Weight = Balanced) |
 | [Visualizations](https://github.com/joshsalce/Speed_ISO/tree/main/Visualizations) | Includes relevant visuals from background research on probability calibration, generated figures from EDA, unsupervised ML, and visuals for model performance and predictions |
 
-## Visualizations
-- Test
-  - Test2
-- Test3
+## Visualizations- Descriptions
+- First Pass Performance: Visualizations of First Set of Models
+  - [conf_matx.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/First%20Pass%20Performance/conf_matx.png)- Confusion Matrices for each model
+  - [metrics.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/First%20Pass%20Performance/metrics.png)- Metrics DataFrame
+  - [proba_dist.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/First%20Pass%20Performance/proba_dist.png)- Probability distribution of all classes for each model
+  - [roc_auc.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/First%20Pass%20Performance/roc_auc.png)- ROC-AUC and Precision-Recall curves for each model
+ 
+- Second Pass Performance: Visualizations of Second Set of Models
+  - [conf_matx.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/Second%20Pass%20Performance/conf_matx.png)- Confusion Matrices for each model
+  - [metrics.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/Second%20Pass%20Performance/metrics.png)- Metrics DataFrame
+  - [proba_dist.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/Second%20Pass%20Performance/proba_dist.png)- Probability distribution of all classes for each model
+  - [roc_auc.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/Second%20Pass%20Performance/roc_auc.png)- ROC-AUC and Precision-Recall curves for each model
+
+- Third Pass Performance: Visualizations of Third Set of Models
+  - Final Model
+    - [error.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/Third%20Pass%20Performance/Final%20Model/error.png)- Scatterplot of 2022 players' True ISO vs. predicted ISO
+    - [residuals.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/Third%20Pass%20Performance/Final%20Model/residuals.png)- Residual Plot of Predicted ISO values vs. True ISO minus Predicted ISO
+    - [residuals_qualified.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/Third%20Pass%20Performance/Final%20Model/residuals_qualified.png)- For all qualified 2022 players, plot of predicted ISO with sprint speed +/ 1.5 ft/sec minus predicted ISO at true sprint speed (Maximum and Miniumums  at +0.020 and ~-0.035 points of predicted ISO)
+  - [Individual Residuals 2022](https://github.com/joshsalce/Speed_ISO/tree/main/Visualizations/Third%20Pass%20Performance/Individual%202022%20Residuals): Residuals of predicted ISO with sprint speed +/ 1.5 ft/sec minus predicted ISO with no change to sprint speed
+    - Players: Ronald Acuña Jr., Mookie Betts, Alex Bregman, Corbin Carroll, Starling Marte, Kyle Schwarber, Giancarlo Stanton, Bobby Witt Jr. 
+  - [conf_matx.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/Third%20Pass%20Performance/conf_matx.png)- Confusion Matrices for each model
+  - [metrics.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/Third%20Pass%20Performance/metrics.png)- Metrics DataFrame
+  - [proba_dist.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/Third%20Pass%20Performance/proba_dist.png)- Probability distribution of all classes for each model
+  - [roc_auc.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/Third%20Pass%20Performance/roc_auc.png)- ROC-AUC and Precision-Recall curves for each model
+  - [speed_v_change.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/Third%20Pass%20Performance/speed_v_change.png)- Scatterplot of 2022 qualified players, 2022 sprint speed vs. 2022 sprint speed minus maximum sprint speed of all individual sprint speeds 2015-2023 
+  
+- Hit_Type_Bar.png
+- PCA_Imbalanced.png
+- PCA_Undersampled.png
+- calc_distance_error.png
+- fig8_Niculescu-Mizil_Caruana.png: Figure 8 from [Niculescu-Mizil and Caruana] (https://www.cs.cornell.edu/~alexn/papers/calibration.icml05.crc.rev3.pdf)
+- pairplot_1B.png
+- pairplot_2B.png
+- pairplot_3B.png
+- reflection.gif
+- translation.gif
 
