@@ -52,7 +52,7 @@ Much of this project's inspiration has been inspired by Corbin Carroll, outfield
 - [PCA_Imbalanced.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/PCA_Imbalanced.png)- 2D and 3D plots of cleaned data with PCA applied (2 and 3 component)
 - [PCA_Undersampled.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/PCA_Undersampled.png)- 2D and 3D plots of cleaned data with PCA and undersampling of non-minority clases applied (2 and 3 component)
 - [calc_distance_error.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/calc_distance_error.png)- Scatterplot of Statcast hit_distance_sc variable vs. personally calculated distance metric (see Exploratory notebook in Analysis Notebooks)
-- fig8_Niculescu-Mizil_Caruana.png: Figure 8 from [Niculescu-Mizil and Caruana](https://www.cs.cornell.edu/~alexn/papers/calibration.icml05.crc.rev3.pdf)
+- [fig8_Niculescu-Mizil_Caruana.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/fig8_Niculescu-Mizil_Caruana.png): Figure 8 from [Niculescu-Mizil and Caruana](https://www.cs.cornell.edu/~alexn/papers/calibration.icml05.crc.rev3.pdf)
 - [reflection.gif](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/reflection.gif)- GIF, reflecting Corbin Carroll's 2022 hits from Statcast hit-coordinates right-side up
 - [translation.gif](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/translation.gif)- GIF, translating Corbin Carroll's 2022 hits from Statcast hit-coordinates (after reflection) to the origin 
 
