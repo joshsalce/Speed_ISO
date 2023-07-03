@@ -48,14 +48,11 @@ Much of this project's inspiration has been inspired by Corbin Carroll, outfield
   - [roc_auc.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/Third%20Pass%20Performance/roc_auc.png)- ROC-AUC and Precision-Recall curves for each model
   - [speed_v_change.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/Third%20Pass%20Performance/speed_v_change.png)- Scatterplot of 2022 qualified players, 2022 sprint speed vs. 2022 sprint speed minus maximum sprint speed of all individual sprint speeds 2015-2023 
   
-- Hit_Type_Bar.png
-- PCA_Imbalanced.png
-- PCA_Undersampled.png
-- calc_distance_error.png
-- fig8_Niculescu-Mizil_Caruana.png: Figure 8 from [Niculescu-Mizil and Caruana] (https://www.cs.cornell.edu/~alexn/papers/calibration.icml05.crc.rev3.pdf)
-- pairplot_1B.png
-- pairplot_2B.png
-- pairplot_3B.png
-- reflection.gif
-- translation.gif
+- [Hit_Type_Bar.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/Hit_Type_Bar.png)- Bar plot of hit type distributions for singles, doubles, triples
+- [PCA_Imbalanced.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/PCA_Imbalanced.png)- 2D and 3D plots of cleaned data with PCA applied (2 and 3 component)
+- [PCA_Undersampled.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/PCA_Undersampled.png)- 2D and 3D plots of cleaned data with PCA and undersampling of non-minority clases applied (2 and 3 component)
+- [calc_distance_error.png](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/calc_distance_error.png)- Scatterplot of Statcast hit_distance_sc variable vs. personally calculated distance metric (see Exploratory notebook in Analysis Notebooks)
+- fig8_Niculescu-Mizil_Caruana.png: Figure 8 from [Niculescu-Mizil and Caruana](https://www.cs.cornell.edu/~alexn/papers/calibration.icml05.crc.rev3.pdf)
+- [reflection.gif](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/reflection.gif)- GIF, reflecting Corbin Carroll's 2022 hits from Statcast hit-coordinates right-side up
+- [translation.gif](https://github.com/joshsalce/Speed_ISO/blob/main/Visualizations/translation.gif)- GIF, translating Corbin Carroll's 2022 hits from Statcast hit-coordinates (after reflection) to the origin 
 
